@@ -1,7 +1,6 @@
 import { redirect } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
 import AchievementsClient from '@/components/AchievementsClient'
-import type { User, Streak, TaskLog } from '@/types'
 
 export default async function AchievementsPage() {
   const supabase = await createClient()
@@ -17,9 +16,9 @@ export default async function AchievementsPage() {
 
   return (
     <AchievementsClient
-      allUsers={(allUsers || []) as User[]}
-      streaks={(streaks || []) as Streak[]}
-      logs={(logs || []) as TaskLog[]}
+      allUsers={allUsers ?? []}
+      streaks={streaks ?? []}
+      logs={logs ?? []}
       currentUserId={user.id}
     />
   )
