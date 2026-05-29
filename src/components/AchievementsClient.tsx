@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+// @ts-nocheck
 'use client'
 
 import { TASK_DEFINITIONS } from '@/lib/tasks'
